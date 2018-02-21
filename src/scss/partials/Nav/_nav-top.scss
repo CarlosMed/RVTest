@@ -1,0 +1,28 @@
+.nav-top {
+  display: none;
+}
+
+@media screen and (min-width: 520px) {
+  .nav-top {
+    background-color: $darkblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+
+    p {
+      font-size: 0.8em;
+    }
+
+    p:first-child {
+      margin-right: 50px;
+    }
+  }
+
+
+  img {
+    margin-left: 5px;
+    width: 12px;
+  }
+}

@@ -1,0 +1,47 @@
+.footer-bottom {
+  align-items: center;
+  font-size: 0.6em;
+  color: $white;
+  background-color: $lightblue;
+  letter-spacing: 0.6px;
+
+  p {
+    padding: 0 5px;
+    border-right: 1px solid $white;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  img {
+    width: 10px;
+    margin-left: 5px;
+  }
+
+  hr {
+    width: 280px;
+  }
+
+  .copywrite,
+  .sub-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 898px) {
+  .footer-bottom {
+    .sub-nav, hr {
+      display: none;
+    }
+
+    .copywrite {
+      font-size: 1.4em;
+      p:first-child {
+        margin: 0;
+      }
+    }
+  }
+}

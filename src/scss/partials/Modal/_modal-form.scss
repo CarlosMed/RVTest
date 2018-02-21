@@ -1,0 +1,110 @@
+.modal-form {
+  padding: 20px 20px;
+  color: rgba($black, 0.7);
+
+  input,
+  textarea {
+    border: 1px solid rgba($darkgrey, 0.6);
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    i {
+      font-size: 0.8em;
+      color: rgba($black, 0.4);
+    }
+  }
+
+  .phone {
+    width: 200px;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  label {
+    font-size: 0.8em;
+  }
+
+  img {
+    width: 20px;
+  }
+
+  input {
+    padding: 5px;
+    font-family: $openSans;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+
+    label {
+      margin-top: 2.5px;
+      margin-right: 5px;
+    }
+  }
+
+  input[type='radio'] {
+    margin-right: 10px;
+    position: relative;
+    visibility: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background: $white;
+      border: 1px solid $darkgrey;
+      visibility: visible;
+    }
+
+    &:checked:after {
+      content: '';
+      position: absolute;
+      border: 1px solid $darkgrey;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+      background: $lightblue;
+      visibility: visible;
+    }
+
+    &:checked:before {
+      content: '';
+      position: absolute;
+      border: 1px solid $darkgrey;
+      margin: 5px 5px;
+      width: 10px;
+      height: 10px;
+      z-index: 1;
+      background: $white;
+    }
+  }
+
+  hr {
+    margin: 20px 0;
+  }
+
+  button {
+    border: 0;
+    color: $teal;
+    text-align: right;
+    width: 100%;
+  }
+
+  #number {
+    width: 200px;
+  }
+}

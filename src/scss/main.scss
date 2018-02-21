@@ -1,0 +1,30 @@
+// Modules
+@import 'modules/_colors';
+@import 'modules/_fonts';
+
+// Partials
+@import 'partials/Nav/_index.scss';
+@import 'partials/Main/_index.scss';
+@import 'partials/Modal/_index.scss';
+@import 'partials/Footer/_index.scss';
+
+body {
+  font-family: $openSans;
+  position: relative;
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  hr {
+    border-color: rgba($lightgrey, 0.35);
+  }
+
+  .show {
+    display: block;
+  }
+}

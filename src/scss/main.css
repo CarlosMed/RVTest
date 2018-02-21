@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+.border {
+  border: 1px solid salmon; }
+
+.nav-top {
+  display: none; }
+
+@media screen and (min-width: 520px) {
+  .nav-top {
+    background-color: #083d8c;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    padding: 0 20px; }
+    .nav-top p {
+      font-size: 0.8em; }
+    .nav-top p:first-child {
+      margin-right: 50px; }
+  img {
+    margin-left: 5px;
+    width: 12px; } }
+
+.nav-main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 0.8px 0.2px rgba(63, 63, 63, 0.09);
+  position: relative; }
+
+.top-main {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; }
+  .top-main .logo {
+    width: 120px;
+    cursor: pointer; }
+  .top-main .hamburger {
+    width: 60px;
+    cursor: pointer; }
+  .top-main button {
+    border: 3px solid #216ddf;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 0.8em;
+    color: #216ddf;
+    cursor: pointer; }
+    .top-main button:hover {
+      border-color: #083d8c;
+      color: #083d8c; }
+    .top-main button img {
+      width: 0.9em; }
+
+.links {
+  display: none;
+  border-top: 4px solid #02c7c6;
+  border-bottom: 4px solid #02c7c6;
+  width: 100%; }
+  .links h4 {
+    text-align: center;
+    color: #083d8c;
+    text-transform: uppercase;
+    margin-top: 0; }
+  .links button {
+    margin-top: 10px;
+    padding-right: 20px;
+    border: 0;
+    color: #02c7c6;
+    text-align: right;
+    width: 100%;
+    font-size: 1.3em; }
+    .links button:last-child {
+      display: none; }
+  .links ul {
+    margin-bottom: 0; }
+  .links li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background: #f6f6f6;
+    margin-bottom: 2px;
+    padding: 0 10px; }
+    .links li:last-child {
+      margin: 0; }
+    .links li img {
+      width: 0.7em; }
+
+.header-img {
+  background: url("../img/water-image.png") center center no-repeat;
+  background-size: cover;
+  height: 100px; }
+
+@media screen and (min-width: 898px) {
+  .top-main {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    height: 80px; }
+    .top-main .logo {
+      max-width: 80%; }
+    .top-main .hamburger {
+      display: none; }
+    .top-main button {
+      display: none; }
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: none;
+    width: 80%;
+    padding-right: 40px; }
+    .links h4,
+    .links .close {
+      display: none; }
+    .links button {
+      border: 3px solid #216ddf;
+      border-radius: 5px;
+      height: 50px;
+      width: 180px;
+      color: #083d8c;
+      text-align: center;
+      font-size: 1.1em;
+      margin-top: 0;
+      margin-left: 20px; }
+      .links button:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .links button:last-child img {
+          margin-right: 4px; }
+      .links button:hover {
+        border-color: #083d8c;
+        color: #083d8c; }
+    .links ul {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0; }
+    .links li {
+      background: none;
+      margin: 0 auto;
+      font-size: 100%; }
+      .links li img {
+        width: 0.7em;
+        transform: rotate(90deg);
+        margin-left: 10px; }
+  .header-img {
+    background: url("../img/water-image.png") center center no-repeat;
+    background-size: cover;
+    height: 150px; } }
+
+.filter {
+  background: #f6f6f6;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 20px;
+  flex-wrap: wrap; }
+  .filter h2 {
+    color: #216ddf;
+    font-size: 0.8em; }
+  .filter .filter-button {
+    border: 1px solid #bebebe;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .filter .filter-button button {
+      padding: 15px 15px;
+      background: white;
+      border: none;
+      color: #3f3f3f;
+      font-weight: bold;
+      font-size: 0.8em;
+      width: 150px; }
+    .filter .filter-button .dropdown {
+      font-size: 0.9em;
+      background: #f6f6f6;
+      flex-basis: 60px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 47px; }
+
+.filtering {
+  width: 100%;
+  display: none; }
+  .filtering form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #bebebe; }
+    .filtering form div {
+      margin-bottom: 10px; }
+      .filtering form div:last-child {
+        margin-bottom: 0; }
+      .filtering form div input[type=checkbox] {
+        margin-right: 10px;
+        position: relative;
+        cursor: pointer; }
+        .filtering form div input[type=checkbox]:before {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 3px;
+          background: white;
+          border: 1px solid #bebebe;
+          visibility: visible; }
+        .filtering form div input[type=checkbox]:checked:after {
+          content: '';
+          position: absolute;
+          border: 1px solid #bebebe;
+          padding: 4px;
+          width: 20px;
+          height: 20px;
+          background: #216ddf;
+          visibility: visible; }
+        .filtering form div input[type=checkbox]:checked:before {
+          content: '';
+          position: absolute;
+          border: 1px solid #bebebe;
+          margin: 5px 5px;
+          width: 10px;
+          height: 10px;
+          z-index: 1;
+          background: white; }
+      .filtering form div label {
+        letter-spacing: 0.8px;
+        font-weight: lighter; }
+
+@media screen and (min-width: 898px) {
+  .filtering {
+    display: block; }
+  .filter {
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; }
+    .filter hr {
+      height: 50px;
+      margin: 0 20px; }
+    .filter .filter-button,
+    .filter .filter-button > button,
+    .filter form {
+      border: none;
+      background: none;
+      margin: 0;
+      padding: 0; }
+    .filter .filter-button button {
+      width: auto;
+      margin-right: 20px; }
+    .filter .filter-button .dropdown {
+      display: none; }
+    .filter .filtering {
+      width: auto;
+      padding: 0; }
+      .filter .filtering form {
+        padding: 0; }
+      .filter .filtering form > div {
+        display: inline-flex;
+        margin: 2px 0; }
+        .filter .filtering form > div label {
+          margin: 0 10px; } }
+
+.dealer-container {
+  margin: 10px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.dealer {
+  text-align: center;
+  border: 3px solid #f6f6f6;
+  border-radius: 10px;
+  width: 410px;
+  margin: 10px 0; }
+  .dealer h2 {
+    font-weight: lighter;
+    text-align: center; }
+  .dealer hr {
+    width: 280px; }
+  .dealer .call-desk {
+    display: none; }
+  .dealer .call-mobile {
+    display: block;
+    background-color: #216ddf;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+    font-size: 1.2em; }
+    .dealer .call-mobile span {
+      font-size: 0.6em; }
+    .dealer .call-mobile img {
+      width: 40px; }
+  .dealer i {
+    display: block;
+    font-size: 0.8em;
+    margin: 20px 0;
+    color: #3f3f3f; }
+  .dealer .email {
+    border: 3px solid #02c7c6;
+    padding: 10px 40px;
+    color: #083d8c;
+    font-weight: bold;
+    cursor: pointer; }
+    .dealer .email img {
+      width: 15px;
+      margin-bottom: 2px; }
+  .dealer .business-info > .hours {
+    margin: 40px 0; }
+    .dealer .business-info > .hours h4 {
+      color: #3f3f3f; }
+    .dealer .business-info > .hours ul > li {
+      color: #3f3f3f; }
+  .dealer .certifications {
+    background-color: #f6f6f6; }
+    .dealer .certifications ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px 5px;
+      margin: 0; }
+      .dealer .certifications ul li {
+        color: #3f3f3f;
+        margin: 5px 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .dealer .certifications ul li img {
+          width: 15px;
+          margin-right: 10px; }
+
+@media screen and (min-width: 898px) {
+  .dealer-container {
+    margin: 20px auto;
+    max-width: 1300px; }
+    .dealer-container .dealer {
+      text-align: center;
+      margin: 10px;
+      max-width: 420px; }
+      .dealer-container .dealer:first-child {
+        margin-left: 0; }
+      .dealer-container .dealer:last-child {
+        margin-right: 0; }
+      .dealer-container .dealer .call-mobile {
+        display: none; }
+      .dealer-container .dealer .call-desk {
+        display: block;
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+        color: #3f3f3f;
+        margin: 0 auto;
+        font-size: 1.6em;
+        border: none; }
+        .dealer-container .dealer .call-desk img {
+          width: 30px;
+          margin-right: 10px; }
+      .dealer-container .dealer .certifications ul {
+        padding: 20px 40px; } }
+
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(63, 63, 63, 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none; }
+  .modal .modal-container {
+    background: white;
+    display: block;
+    width: 300px; }
+
+.modal-top {
+  background: #083d8c;
+  color: white;
+  padding: 10px 20px;
+  position: relative; }
+  .modal-top h2, .modal-top h5 {
+    margin-top: 10px;
+    margin-bottom: 0; }
+  .modal-top button {
+    border: none;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    font-weight: bold;
+    cursor: pointer; }
+
+@media screen and (min-width: 898px) {
+  .modal-container {
+    width: 500px; } }
+
+.modal-form {
+  padding: 20px 20px;
+  color: rgba(63, 63, 63, 0.7); }
+  .modal-form input,
+  .modal-form textarea {
+    border: 1px solid rgba(190, 190, 190, 0.6);
+    margin: 5px 0;
+    width: 100%; }
+  .modal-form .label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+    .modal-form .label i {
+      font-size: 0.8em;
+      color: rgba(63, 63, 63, 0.4); }
+  .modal-form .phone {
+    width: 200px; }
+  .modal-form p {
+    font-size: 1em; }
+  .modal-form label {
+    font-size: 0.8em; }
+  .modal-form img {
+    width: 20px; }
+  .modal-form input {
+    padding: 5px;
+    font-family: "Open Sans", sans-serif; }
+  .modal-form .radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px; }
+    .modal-form .radio label {
+      margin-top: 2.5px;
+      margin-right: 5px; }
+  .modal-form input[type='radio'] {
+    margin-right: 10px;
+    position: relative;
+    visibility: hidden; }
+    .modal-form input[type='radio']:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background: white;
+      border: 1px solid #bebebe;
+      visibility: visible; }
+    .modal-form input[type='radio']:checked:after {
+      content: '';
+      position: absolute;
+      border: 1px solid #bebebe;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+      background: #216ddf;
+      visibility: visible; }
+    .modal-form input[type='radio']:checked:before {
+      content: '';
+      position: absolute;
+      border: 1px solid #bebebe;
+      margin: 5px 5px;
+      width: 10px;
+      height: 10px;
+      z-index: 1;
+      background: white; }
+  .modal-form hr {
+    margin: 20px 0; }
+  .modal-form button {
+    border: 0;
+    color: #02c7c6;
+    text-align: right;
+    width: 100%; }
+  .modal-form #number {
+    width: 200px; }
+
+.footer-top {
+  text-align: center;
+  background-color: #083d8c;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .footer-top .footer-logo {
+    width: 210px; }
+  .footer-top h2, .footer-top ul {
+    margin: 0; }
+  .footer-top .social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 330px;
+    margin-top: 10px; }
+    .footer-top .social h2 {
+      display: inline;
+      color: white;
+      font-size: 0.7em;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: normal; }
+    .footer-top .social ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100px; }
+      .footer-top .social ul li:nth-child(2) {
+        width: 15px; }
+      .footer-top .social ul img {
+        width: 1.6em;
+        max-width: 40%; }
+
+@media screen and (min-width: 898px) {
+  .footer-top {
+    height: 130px; }
+    .footer-top .social {
+      margin-top: 30px; } }
+
+.footer-bottom {
+  align-items: center;
+  font-size: 0.6em;
+  color: white;
+  background-color: #216ddf;
+  letter-spacing: 0.6px; }
+  .footer-bottom p {
+    padding: 0 5px;
+    border-right: 1px solid white; }
+    .footer-bottom p:last-child {
+      border: none; }
+  .footer-bottom img {
+    width: 10px;
+    margin-left: 5px; }
+  .footer-bottom hr {
+    width: 280px; }
+  .footer-bottom .copywrite,
+  .footer-bottom .sub-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+@media screen and (min-width: 898px) {
+  .footer-bottom .sub-nav, .footer-bottom hr {
+    display: none; }
+  .footer-bottom .copywrite {
+    font-size: 1.4em; }
+    .footer-bottom .copywrite p:first-child {
+      margin: 0; } }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  position: relative; }
+  body ul {
+    padding: 0; }
+    body ul li {
+      list-style: none; }
+  body hr {
+    border-color: rgba(246, 246, 246, 0.35); }
+  body .show {
+    display: block; }

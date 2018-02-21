@@ -1,0 +1,150 @@
+.dealer-container {
+  margin: 10px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.dealer {
+  text-align: center;
+  border: 3px solid $lightgrey;
+  border-radius: 10px;
+  width: 410px;
+  margin: 10px 0;
+
+  h2 {
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  hr {
+    width: 280px;
+  }
+
+  .call-desk {
+    display: none;
+  }
+
+  .call-mobile {
+    display: block;
+    background-color: $lightblue;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: $white;
+    margin: 0 auto;
+    font-size: 1.2em;
+
+    span {
+      font-size: 0.6em;
+    }
+
+    img {
+      width: 40px;
+    }
+  }
+  i {
+    display: block;
+    font-size: 0.8em;
+    margin: 20px 0;
+    color: $black;
+  }
+
+  .email {
+    border: 3px solid $teal;
+    padding: 10px 40px;
+    color: $darkblue;
+    font-weight: bold;
+    cursor: pointer;
+
+    img {
+      width: 15px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .business-info > .hours {
+    margin: 40px 0;
+
+    h4 {
+      color: $black;
+    }
+
+    ul > li {
+      color: $black;
+    }
+  }
+
+  .certifications {
+    background-color: $lightgrey;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px 5px;
+      margin: 0;
+
+      li {
+        color: $black;
+        margin: 5px 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          width: 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 898px) {
+  .dealer-container {
+    margin: 20px auto;
+    max-width: 1300px;
+
+    .dealer {
+      text-align: center;
+      margin: 10px;
+      max-width: 420px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .call-mobile {
+        display: none;
+      }
+
+      .call-desk {
+        display: block;
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+        color: $black;
+        margin: 0 auto;
+        font-size: 1.6em;
+        border: none;
+
+        img {
+          width: 30px;
+          margin-right: 10px;
+        }
+      }
+
+      .certifications {
+        ul {
+          padding: 20px 40px;
+        }
+      }
+    }
+  }
+}
