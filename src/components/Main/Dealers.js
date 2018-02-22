@@ -1,52 +1,12 @@
 import React from 'react'
-
 import CertList from './CertList'
 
 import mobilePhoneIcon from '../../img/phone-icon-mobile.png'
 import desktopPhoneIcon from '../../img/phone-icon-desktop.png'
 import emailIcon from '../../img/email-icon.png'
-import starIcon from '../../img/star-installation-pro.png'
-import usersIcon from '../../img/users-commercial-pro.png'
-import homeIcon from '../../img/home-residential-pro.png'
-import gearIcon from '../../img/gear-service-pro.png'
 
 const DealerContainer = props => {
   const { name, phone1, certifications } = props.dealer.data
-
-  let certs = () => {
-    let certInfos = {
-      infos: [
-        {
-          icon: starIcon,
-          alt: 'Star Installation Pro',
-          name: 'Installation Pro'
-        },
-        {
-          icon: homeIcon,
-          alt: 'Home Residential Pro',
-          name: 'Residential Pro'
-        },
-        {
-          icon: usersIcon,
-          alt: 'Commercial Pro Icon',
-          name: 'Commercial Pro'
-        },
-        {
-          icon: gearIcon,
-          alt: 'Service Pro',
-          name: 'Service Pro'
-        }
-      ]
-    }
-
-    certifications.filter(cert => {
-      certInfos.infos.filter(info => {
-        if (cert === info.name) {
-          return <CertList info={info} />
-        }
-      })
-    })
-  }
 
   function handleClick(e) {
     const modal = document.querySelector('.modal')
@@ -84,7 +44,9 @@ const DealerContainer = props => {
           </ul>
         </div>
         <div className="certifications">
-          <ul>{certs()}</ul>
+          <ul>
+            {certifications.map((certs, i) => <CertList key={i} certinfo={certs} />)}
+          </ul>
         </div>
       </div>
     </div>
